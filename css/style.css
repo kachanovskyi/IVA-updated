@@ -80,7 +80,6 @@ a:active {
 
 .navbar.navbar-default {
     border-bottom: 1px solid rgba(255, 255, 255, .2) !important;
-    height: 100px;
     background: transparent;
 }
 
@@ -88,9 +87,10 @@ a:active {
     padding: 0;
     display: flex;
     align-items: center;
-    margin: 24px 0;
+    margin: 32px 0;
     font-weight: 400;
     color: #2F80ED !important;
+    height: auto;
 }
 
 .navbar.navbar-default .navbar-brand > .menu-item {
@@ -112,19 +112,23 @@ a:active {
     line-height: 140%;
     font-weight: 300;
     text-decoration: none;
-    padding: 37.5px 20px;
+    padding: 30px 10px;
 }
+.nav.navbar-nav.navbar-right > li > a.menu-item > img {
+    width: 20px;
+}
+
 
 .menu-item {
     color: rgba(255, 255, 255, .5) !important;
 }
 
-.nav.navbar-nav.navbar-right > li.active > a.menu-item {
-    background: transparent;
-    color: #FFFFFF !important;
-    border-bottom: 3px solid #FFFFFF;
-    padding-bottom: 35.5px;
-}
+/*.nav.navbar-nav.navbar-right > li.active > a.menu-item {*/
+    /*background: transparent;*/
+    /*color: #FFFFFF !important;*/
+    /*border-bottom: 3px solid #FFFFFF;*/
+    /*padding-bottom: 35.5px;*/
+/*}*/
 
 .nav.navbar-nav.navbar-right > li:hover > .menu-item {
     color: rgba(255, 255, 255, .88) !important;
@@ -136,6 +140,9 @@ a:active {
 .nav.navbar-nav.navbar-right > li > a.menu-item:visited,
 .nav.navbar-nav.navbar-right > li > a.menu-item:active {
     text-decoration: none
+}
+.nav.navbar-nav.navbar-right > li > a > img {
+    vertical-align: middle;
 }
 
 .description-text {
