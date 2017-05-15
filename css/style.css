@@ -6,13 +6,13 @@ body, html {
 }
 
 h1, h2 {
-    line-height: 100%;
+    line-height: 140%;
     color: #333333;
 }
 
 h1 {
     font-size: 44px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
     letter-spacing: 0.704px;
 }
 
@@ -79,7 +79,7 @@ a:active {
 }
 
 .navbar.navbar-default {
-    border-bottom: 1px solid rgba(255, 255, 255, .2) !important;
+    /*border-bottom: 1px solid rgba(255, 255, 255, .2) !important;*/
     background: transparent;
 }
 
@@ -115,9 +115,20 @@ a:active {
     padding: 30px 10px;
 }
 .nav.navbar-nav.navbar-right > li > a.menu-item > img {
-    width: 20px;
+    height: 20px;
 }
 
+.navbar-collapse.collapse {
+    display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+    float: left !important;
+}
+
+.navbar-right {
+    float: right!important;
+}
 
 .menu-item {
     color: rgba(255, 255, 255, .5) !important;
@@ -213,18 +224,15 @@ a:active {
 
 }
 
-.slide-1 h1 {
-    color: #FFFFFF;
-}
-
 .slide-1 {
     background: url("../img/header-img-min.png");
-    display: table;
+    display: flex;
     float: left;
     width: 100%;
     height: 100vh;
     padding-right: 0;
     padding-left: 0;
+    flex-direction: column;
 }
 
 #wrapper [class*="slide-"] {
@@ -235,15 +243,33 @@ a:active {
 }
 
 .slide-1 .content {
-    padding-top: 100px;
-    display: table-cell;
-    vertical-align: middle;
+    /*padding-top: 100px;*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.slide-1 .container-bottom {
+    position: absolute;
+    bottom: 0;
+    background: #FFFFFF;
+    width: 100%;
+    padding-top: 80px;
 }
 
 .slide-2 {
-    padding: 80px 0;
-    background: url("../img/header-img.png");
-    background-size: cover;
+    padding: 0;
+    background: url("../img/header-img-min.png");
+    /*background-size: cover;*/
+}
+
+.slide-2 h1 {
+
+}
+
+.slide-2 .container-inner {
+    background: #FFFFFF;
 }
 
 .slide-2,
@@ -449,9 +475,6 @@ a:active {
 }
 
 @media (max-width: 991px) {
-    .navbar.navbar-default .navbar-brand .menu-item {
-        display: none;
-    }
 
     .service {
         text-align: center;
@@ -505,15 +528,11 @@ a:active {
     }
 
     .nav.navbar-nav.navbar-right > li > a.menu-item {
-        background: linear-gradient(115.92deg, #0573E6 0%, #00ABFF 100%);
+        /*background: linear-gradient(115.92deg, #0573E6 0%, #00ABFF 100%);*/
         padding: 22px 20px 0;
         height: 66px;
         text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, .2);
-    }
-
-    .nav.navbar-nav.navbar-right > li:last-child > a.menu-item {
-        border-bottom: 3px solid #FFFFFF !important;
+        /*border-bottom: 1px solid rgba(255, 255, 255, .2);*/
     }
 
     .nav.navbar-nav.navbar-right > li.active > a.menu-item {
@@ -545,6 +564,7 @@ a:active {
     .container-fluid > .navbar-header {
         padding-left: 10%;
         padding-right: 10%;
+        float: left;
     }
 
     .slide-1, .slide-2,
