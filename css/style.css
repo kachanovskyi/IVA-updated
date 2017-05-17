@@ -234,6 +234,7 @@ a:active {
 
 .slide-1,
 .slide-4 {
+    min-height: 600px;
     height: 100vh;
 }
 
@@ -241,7 +242,9 @@ a:active {
 .slide-1,
 .slide-2,
 .slide-3,
-.slide-4 {
+.slide-4,
+.slide-5,
+.slide-6 {
     background: url("../img/header-img-min.png");
     display: flex;
     float: left;
@@ -249,10 +252,8 @@ a:active {
     padding-right: 0;
     padding-left: 0;
     flex-direction: column;
-}
-.slide-4,
-.slide-5 {
-    background: url("../img/bg.png");
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 #wrapper [class*="slide-"] {
@@ -263,12 +264,13 @@ a:active {
 }
 
 .slide-1 .content,
-.slide-4 .content {
+.slide-4 .content-inner {
     /*padding-top: 100px;*/
     /*display: table-cell;*/
     /*vertical-align: middle;*/
     margin-top: auto;
     margin-bottom: auto;
+    padding: 0;
 }
 
 .slide-1 .container-bottom {
@@ -281,7 +283,7 @@ a:active {
 
 .slide-2 {
     padding: 0;
-    background: url("../img/header-img-min.png");
+    /*background: url("../img/header-img-min.png");*/
     /*background-size: cover;*/
     width: 100%;
 }
@@ -337,15 +339,54 @@ a:active {
     max-width: 100%;
 }
 
-
-.slide-4 {
+.slide-4 .content {
     background: url("../img/bg.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    float: left;
+    padding-right: 0;
+    padding-left: 0;
+    flex-direction: column;
 }
 
 .slide-5 .container-inner {
-    padding: 80px auto;
+    padding: 80px 0;
     background: #FFFFFF;
 }
+
+.slide-5 .info-left {
+    padding-right: 10%;
+    padding-left: 0;
+}
+.slide-5 .info-right {
+    padding-left: 10%;
+    padding-right: 0;
+}
+
+.slide-6 .container-inner {
+    background: #006DFF;
+    padding: 0;
+    display: table
+}
+.slide-6 .info {
+    padding: 80px 0 80px 15px;
+}
+.slide-6 .logo-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background: #0052BF;
+    height: 100%;
+    float: none;
+}
+.slide-6 .logo-container > img {
+    max-width: 80%;
+}
+.slide-6 .logo-container.dark{
+    background: #003780;
+}
+
 /*.slide-3,*/
 /*.slide-4 {*/
     /*padding: 80px 50px 40px;*/
