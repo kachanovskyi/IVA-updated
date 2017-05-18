@@ -576,6 +576,9 @@ a:active {
         display: none;
     }
 
+    .slide-5 .flexbox {
+        display: flex;
+    }
     .slide-5 .info-left {
         padding-right: 10%;
         padding-left: 0;
@@ -583,7 +586,13 @@ a:active {
     .slide-5 .info-right {
         padding-left: 10%;
         padding-right: 0;
+        flex: 1;
     }
+    .slide-5 .info-right .iva-btn {
+        position: absolute;
+        bottom: 0;
+    }
+
 }
 
 @media (max-width: 991px) {
