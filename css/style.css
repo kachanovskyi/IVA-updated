@@ -49,6 +49,9 @@ a:active {
     text-decoration: none;
 }
 
+.no-padding {
+    padding: 0 !important;
+}
 .no-padding-bottom {
     padding-bottom: 0
 }
@@ -118,7 +121,8 @@ a:active {
 }
 
 .navbar-collapse.collapse {
-    display: block!important;
+    display: inline-block;
+    border: none;
 }
 
 .navbar-nav>li, .navbar-nav {
@@ -164,10 +168,6 @@ a:active {
 .description-text.dark {
     color: rgba(0, 0, 0, .5);
     margin-bottom: 80px;
-}
-
-.border-right {
-    border-right: 1px solid #C4C4C4;
 }
 
 .no-side-padding {
@@ -252,8 +252,6 @@ a:active {
     padding-right: 0;
     padding-left: 0;
     flex-direction: column;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
 }
 
 #wrapper [class*="slide-"] {
@@ -263,6 +261,7 @@ a:active {
     background-size: cover;
 }
 
+.navbar .content,
 .slide-1 .content,
 .slide-4 .content-inner {
     /*padding-top: 100px;*/
@@ -309,8 +308,8 @@ a:active {
     color: #333333;
 }
 
-.slide-2 h1 {
-
+.slide-2 .powered-header {
+    margin-top: 50px;
 }
 
 .slide-2 .container-inner {
@@ -355,15 +354,6 @@ a:active {
     background: #FFFFFF;
 }
 
-.slide-5 .info-left {
-    padding-right: 10%;
-    padding-left: 0;
-}
-.slide-5 .info-right {
-    padding-left: 10%;
-    padding-right: 0;
-}
-
 .slide-6 .container-inner {
     background: #006DFF;
     padding: 0;
@@ -377,7 +367,6 @@ a:active {
     vertical-align: middle;
     text-align: center;
     background: #0052BF;
-    height: 100%;
     float: none;
 }
 .slide-6 .logo-container > img {
@@ -555,11 +544,14 @@ a:active {
 }
 
 @media (max-width: 1199px) {
+    h1 {
+        letter-spacing: 0;
+    }
     .slide-1,
     .slide-2,
     .slide-3 {
-        padding-left: 50px;
-        padding-right: 50px;
+        /*padding-left: 50px;*/
+        /*padding-right: 50px;*/
     }
 
     .navbar.navbar-default .container-fluid {
@@ -576,195 +568,136 @@ a:active {
 }
 
 @media (min-width: 992px) {
-    .advantage:nth-child(odd) {
-        padding-left: 10%;
+    .border-right {
+        border-right: 1px solid #C4C4C4;
     }
 
-    .advantage:nth-child(even) {
+    .slide-2 .powered-header {
+        display: none;
+    }
+
+    .slide-5 .info-left {
         padding-right: 10%;
+        padding-left: 0;
     }
-
-    .footer-inner {
-        padding: 0;
+    .slide-5 .info-right {
+        padding-left: 10%;
+        padding-right: 0;
     }
 }
 
 @media (max-width: 991px) {
-
-    .service {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-
-    .service:first-child {
-        padding-right: 60px;
-    }
-
-    .service:last-child {
-        padding-left: 60px;
-        margin-bottom: 0;
-    }
-
-    .advantage {
+    .slide-1 {
         display: block;
-        text-align: center;
+        float: none;
+    }
+    .slide-1 .content {
+        height: 100vh;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .slide-1 .container-bottom {
+        position: relative;
+        padding-top: 50px;
+    }
+
+    .slide-2 .container-inner {
         padding-bottom: 50px;
     }
+    .slide-2 .case:not(:first-child) img {
+        margin-top: 30px;
+    }
 
-    .advantage .description {
-        text-align: left;
+    .slide-3 .iva-description {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .slide-3 .iva-description p {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .slide-3 .iva-description .iva-btn {
+        margin-top: 50px;
+    }
+
+    .slide-3 .iva-description-img {
+        display: block;
+        text-align: center;
+    }
+    .slide-3 .iva-description-img img {
+        margin-left: -40px;
+    }
+
+    .slide-5 .container-inner {
+        padding: 0;
+    }
+    .slide-5 .border-right {
+        border-bottom: 1px solid #C4C4C4;;
+    }
+
+    .slide-5 .info-left,
+    .slide-5 .info-right {
+        padding: 50px 0;
+    }
+    .slide-5 .info-left p,
+    .slide-5 .info-right p {
+        margin: 20px auto;
     }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
-    .advantage {
-        float: left;
+    .navbar-md {
+        padding: 0;
     }
-
-    .no-left-padding {
-        padding-left: 0 !important;
+    .case {
+        text-align: center;
+    }
+    .slide-6 .info {
+        padding-left: 0;
     }
 }
 
 @media (max-width: 767px) {
-    .navbar.navbar-default {
-        height: 66px;
+    .navbar .content {
+        padding: 0 30px;
     }
-
-    .navbar.navbar-default .navbar-brand {
-        margin: 8px 0;
-    }
-
-    .navbar-default .navbar-toggle {
-        padding-top: 10px;
-        border: none;
-        margin: 11px 0 0;
-        background: transparent;
-    }
-
-    .nav.navbar-nav.navbar-right > li > a.menu-item {
-        /*background: linear-gradient(115.92deg, #0573E6 0%, #00ABFF 100%);*/
-        padding: 22px 20px 0;
-        height: 66px;
-        text-align: center;
-        /*border-bottom: 1px solid rgba(255, 255, 255, .2);*/
-    }
-
-    .nav.navbar-nav.navbar-right > li.active > a.menu-item {
-        background: linear-gradient(115.92deg, #0573E6 0%, #00ABFF 100%);
-        border-bottom: 1px solid rgba(255, 255, 255, .2);
-        font-weight: 500;
-    }
-
-    .navbar-default .navbar-toggle:hover,
-    .navbar-default .navbar-toggle:focus {
-        background: transparent;
-    }
-
-    .navbar-default .navbar-toggle .icon-bar {
-        background-color: #FFFFFF;
-        width: 40px;
-        margin-bottom: 10px;
-        height: 2px !important;
-    }
-
-    .navbar-default .navbar-collapse {
-        border: none;
-    }
-
-    .navbar.navbar-default .container-fluid {
+    .navbar-collapse.collapse {
+        float: right;
         padding: 0;
     }
+    .navbar-header {
+        display: inline-block;
+    }
 
-    .container-fluid > .navbar-header {
-        padding-left: 10%;
-        padding-right: 10%;
+    .slide-1,
+    .slide-2 .container-inner,
+    .slide-3 .iva-description,
+    .slide-4 .content,
+    .slide-5 .info-left,
+    .slide-5 .info-right {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .slide-6 .container-inner {
+        display: block;
+    }
+    .slide-6 .info {
+        padding: 30px;
+    }
+    .slide-6 .logo-container {
+        padding: 60px 30px;
+        display: block;
         float: left;
+        width: 50%;
+    }
+    .slide-6 .info h1 {
+        /*max-width: 90%;*/
+        /*display: block;*/
+        /*margin: auto;*/
     }
 
-    .slide-1, .slide-2,
-    .slide-3, .slide-4 {
-        text-align: left;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .slide-1 .description-text,
-    .description-text {
-        max-width: none;
-        margin-bottom: 60px !important;
-    }
-
-    .slide-1 {
-        padding: 40px 50px 60px;
-    }
-
-    .slide-1 .content {
-        padding-top: 60px;
-    }
-
-    .slide-2 {
-        text-align: center;
-    }
-
-    .slide-2 .top-description {
-        text-align: left;
-    }
-
-    .slide-2 .iva-btn {
-        margin-top: 60px;
-    }
-
-    .slide-2, .slide-3, .slide-4 {
-        padding: 60px 50px;
-    }
-
-    .slide-3, .slide-4 {
-        padding-bottom: 10px;
-    }
-
-    .advantage {
-        text-align: center;
-        padding-bottom: 0;
-    }
-
-    .advantage .description {
-        text-align: center;
-    }
-
-    .advantage > img {
-        max-width: 50%;
-        display: block;
-        margin: 0 auto 30px;
-    }
-
-    .advantage .description {
-        margin-left: auto;
-        max-width: none;
-        margin-bottom: 50px;
-    }
-
-    .footer-inner {
-        display: block;
-        margin-top: 0;
-    }
-
-    .footer-inner .heading {
-        margin-top: 60px;
-    }
-
-    #footer {
-        padding-bottom: 60px;
-    }
-
-    #footer-logo {
-        margin: 50px 0 10px;
-    }
-
-    .logo-container .copyright {
-        position: relative;
-        margin-bottom: 0;
-    }
 }
 
 .advantage .description .header {
@@ -776,7 +709,30 @@ a:active {
 }
 
 @media (max-width: 575px) {
-    .service {
-        padding: 0 !important;
+    .slide-1 {
+        float: left;
+        min-height: 100vh;
+        height: auto;
+    }
+    .slide-1 .content {
+        padding-top: 180px;
+        display: block;
+        min-height: 100vh;
+        height: auto;
+    }
+    .slide-1 .iva-btn {
+        margin-right: 20px;
+    }
+    .iva-btn.white {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar .content {
+        padding: 0 7%;
+    }
+    .slide-6 .info {
+        padding: 30px 7%;
     }
 }
