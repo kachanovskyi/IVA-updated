@@ -1,0 +1,26 @@
+<svg width="185" height="48" viewBox="0 0 185 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>exeo-logo</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-3131 -518)">
+<g id="exeo-logo">
+<use xlink:href="#path0_fill" transform="translate(3131 518)" fill="#FFFFFF"/>
+<use xlink:href="#path1_fill" transform="translate(3131 518)" fill="#FFFFFF"/>
+<use xlink:href="#path2_fill" transform="translate(3131 518)" fill="#FFFFFF"/>
+<use xlink:href="#path3_fill" transform="translate(3131 518)" fill="#FFFFFF"/>
+<use xlink:href="#path4_fill" transform="translate(3131 518)" fill="#FFFFFF"/>
+<use xlink:href="#path5_fill" transform="translate(3131 518)" fill="#FFFFFF"/>
+<use xlink:href="#path6_fill" transform="translate(3131 518)" fill="#FFFFFF"/>
+<use xlink:href="#path7_fill" transform="translate(3131 518)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 16L 0 8L 0 0L 10 0L 33 0L 33 8L 10 8L 10 16L 5 20L 0 16Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 146.034 24C 145.818 32 147 48 165.5 48C 184 48 185.182 32 184.966 24C 185.182 16 184 0 165.5 0C 147 0 145.818 16 146.034 24ZM 156.038 24L 156.031 24.2703C 155.931 27.9436 156.275 31.7788 157.635 34.4131C 158.451 35.9944 159.884 38 165.5 38C 171.116 38 172.55 35.9944 173.366 34.4131C 174.726 31.7788 175.069 27.9436 174.969 24.2703L 174.962 24L 174.969 23.7297C 175.069 20.0566 174.725 16.2212 173.366 13.5869C 172.549 12.0056 171.116 10 165.5 10C 159.884 10 158.451 12.0056 157.635 13.5869C 156.275 16.2212 155.931 20.0566 156.031 23.7297L 156.038 24Z"/>
+<path id="path2_fill" d="M 10 48L 33 48L 33 40L 10 40L 10 32L 5 28L 0 32L 0 40L 0 48L 10 48Z"/>
+<path id="path3_fill" d="M 30 29L 30 19L 16 19L 10 24L 16 29L 30 29Z"/>
+<path id="path4_fill" d="M 101 8L 101 16L 106 20L 111 16L 111 8L 134 8L 134 0L 111 0L 101 0L 101 8Z"/>
+<path id="path5_fill" d="M 134 48L 111 48L 101 48L 101 40L 101 32L 106 28L 111 32L 111 40L 134 40L 134 48Z"/>
+<path id="path6_fill" d="M 131 19L 131 29L 117 29L 111 24L 117 19L 131 19Z"/>
+<path id="path7_fill" d="M 57 0L 45 0L 61 24L 45 48L 57 48L 67 33L 77 48L 89 48L 73 24L 89 0L 77 0L 67 15L 57 0Z"/>
+</defs>
+</svg>
