@@ -658,6 +658,7 @@ a:active {
 
     #showHeader {
         bottom: 0;
+        position: absolute;
     }
 
     .slide-2 .container-inner {
@@ -780,7 +781,7 @@ a:active {
 
 @media (max-width: 320px) {
     .navbar .content {
-        padding: 0 7%;
+        /*padding: 0 7%;*/
     }
     .slide-6 .info {
         padding: 30px 7%;
