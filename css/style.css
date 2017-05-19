@@ -168,15 +168,6 @@ a:active {
     float: right!important;
 }
 
-/*.menu-item {*/
-    /*color: rgba(255, 255, 255, .5) !important;*/
-/*}*/
-
-/*.nav.navbar-nav.navbar-right > li:hover > .menu-item {*/
-    /*color: rgba(255, 255, 255, .88) !important;*/
-    /*transition: .1s ease-in-out;*/
-/*}*/
-
 .nav.navbar-nav.navbar-right > li > a.menu-item:link,
 .nav.navbar-nav.navbar-right > li > a.menu-item:hover,
 .nav.navbar-nav.navbar-right > li > a.menu-item:visited,
@@ -185,17 +176,6 @@ a:active {
 }
 .nav.navbar-nav.navbar-right > li > a > img {
     vertical-align: middle;
-}
-
-.description-text {
-    line-height: 130%;
-    color: rgba(255, 255, 255, 0.8);
-    /*max-width: 70%;*/
-}
-
-.description-text.dark {
-    color: rgba(0, 0, 0, .5);
-    margin-bottom: 80px;
 }
 
 .no-side-padding {
@@ -260,12 +240,17 @@ a:active {
 
 }
 
+.paraxify{
+    background-attachment: fixed !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
 .slide-1,
 .slide-4 {
     min-height: 600px;
     height: 100vh;
 }
-
 
 .slide-1,
 .slide-2,
@@ -282,12 +267,12 @@ a:active {
     flex-direction: column;
 }
 
-#wrapper [class*="slide-"] {
-    position: relative;
-    background-attachment: fixed;
-    background-position: top center;
-    background-size: cover;
-}
+/*#wrapper [class*="slide-"] {*/
+    /*position: relative;*/
+    /*background-attachment: fixed;*/
+    /*background-position: top center;*/
+    /*background-size: cover;*/
+/*}*/
 
 .slide-1 > .content,
 .slide-4 .content-inner {
@@ -362,7 +347,7 @@ a:active {
 }
 
 .slide-4 .content {
-    background: url("../img/bg.png") center;
+    background: url("../img/bg-min.png") center;
     background-size: cover;
     height: 100%;
     display: flex;
