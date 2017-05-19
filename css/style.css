@@ -637,6 +637,10 @@ a:active {
         padding: 0;
     }
 
+    #wrapper [class*="slide-"] {
+        background-attachment: scroll;
+    }
+
     .slide-1 {
         display: block;
         float: none;
