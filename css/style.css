@@ -719,8 +719,15 @@ a:active {
 }
 
 @media (max-width: 767px) {
+    .nav.navbar-nav.navbar-right > li > a.menu-item {
+        padding: 20px 0 20px 20px;
+    }
+    .navbar.navbar-default .navbar-brand {
+        margin: 24px 0;
+    }
     .header--stick .navbar .content {
         padding: 0 30px;
+        height: 64px;
     }
 
     .navbar .content {
