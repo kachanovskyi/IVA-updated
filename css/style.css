@@ -188,6 +188,14 @@ a:active {
     margin-right: 0 !important;
 }
 
+.no-bottom-margin {
+    margin-bottom: 0 !important;
+}
+
+.ordinary-line-height {
+    line-height: 100%;
+}
+
 .display-table {
     display: table !important;
 }
@@ -206,6 +214,7 @@ a:active {
     margin-top: 30px;
     transition: .1s ease-in-out;
     text-align: center;
+    border: none;
 }
 
 .iva-btn:hover {
@@ -237,7 +246,15 @@ a:active {
 .iva-btn.white:active {
     box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.25);
     color: #006DFF;
+}
 
+.iva-btn.subscribe {
+    border-radius: 0 2px 2px 0;
+    padding: 24px 12px;
+    text-align: center;
+}
+.iva-btn.subscribe img {
+    display: none;
 }
 
 .paraxify{
@@ -250,6 +267,10 @@ a:active {
 .slide-4 {
     min-height: 600px;
     height: 100vh;
+}
+
+.slide-1 {
+    min-height: 700px;
 }
 
 .slide-1,
@@ -325,6 +346,11 @@ a:active {
     padding: 0 0 80px;
 }
 
+.slide-3 p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .slide-3 .container-inner{
     background: #EDEDED;
     padding: 0;
@@ -365,10 +391,18 @@ a:active {
     background: #FFFFFF;
 }
 
+.slide-5 p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.slide-5 .iva-btn {
+    margin: 0;
+}
+
 .slide-6 .container-inner {
     background: #006DFF;
     padding: 0;
-    display: table
+    display: table;
 }
 .slide-6 .info {
     padding: 80px 0 80px 15px;
@@ -519,19 +553,20 @@ a:active {
 }
 
 #subscribeForm input {
-    height: 50px;
-    font-size: 16px;
+    height: 66px;
+    font-size: 18px;
     line-height: 100%;
     border-radius: 2px 0 0 2px;
-    border: 1px solid #1BB1CA;
+    border: 1px solid #E5E5E5;
     box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.8);
-    background: transparent;
+    color: rgb(0, 0, 0);
+    background: #FFFFFF;
     outline: none;
+    letter-spacing: 0.288px;
 }
 
 #subscribeForm input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: #333333;
 }
 
 .subscribe-container p:not(.heading) {
@@ -539,35 +574,14 @@ a:active {
     display: inline-block;
 }
 
-.iva-btn.subscribe {
-    height: 50px;
-    min-width: 76px;
-    font-size: 16px;
-    padding: inherit;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    border-radius: 0 2px 2px 0;
-}
-
-.iva-btn.subscribe:hover {
-    color: #1BB1CA;
-}
 
 @media (max-width: 1199px) {
     h1 {
         letter-spacing: 0;
     }
-    .slide-1,
-    .slide-2,
-    .slide-3 {
-        /*padding-left: 50px;*/
-        /*padding-right: 50px;*/
-    }
 
-    .navbar.navbar-default .container-fluid {
-        /*padding-left: 4%;*/
-        /*padding-right: calc(4% - 18px);*/
+    .slide-1 .container-bottom {
+        padding-top: 50px;
     }
 
     .slide-3 .iva-description {
@@ -575,6 +589,18 @@ a:active {
     }
     .slide-3 .iva-description-img {
         padding-top: 0;
+    }
+
+    .iva-btn.subscribe {
+        text-align: center;
+        padding: 22px 12px;
+    }
+    .iva-btn.subscribe span {
+        display: none;
+    }
+    .iva-btn.subscribe img {
+        display: inline-block;
+        /*padding: 12px 24px;*/
     }
 }
 
@@ -602,17 +628,20 @@ a:active {
     .slide-5 .info-left {
         padding-right: 10%;
         padding-left: 0;
+        flex: 1;
     }
     .slide-5 .info-right {
         padding-left: 10%;
         padding-right: 0;
-        flex: 1;
     }
-    .slide-5 .info-right .iva-btn {
+    .slide-5 .info-left .iva-btn {
         position: absolute;
         bottom: 0;
     }
 
+    .slide-6 .container-inner {
+        margin-bottom: 80px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -685,9 +714,15 @@ a:active {
     .slide-5 .info-right {
         padding: 50px 0;
     }
-    .slide-5 .info-left p,
-    .slide-5 .info-right p {
-        margin: 20px auto;
+
+    .iva-btn.subscribe {
+        padding: 24px;
+    }
+    .iva-btn.subscribe span {
+        display: inline-block;
+    }
+    .iva-btn.subscribe img {
+        display: none;
     }
 }
 
@@ -720,7 +755,6 @@ a:active {
     }
     .navbar-collapse.collapse {
         float: right;
-        /*padding: 0;*/
     }
     .navbar-header {
         display: inline-block;
@@ -768,6 +802,16 @@ a:active {
     }
     .iva-btn.white {
         margin: 20px 0;
+    }
+
+    .iva-btn.subscribe {
+        padding: 22px 12px;
+    }
+    .iva-btn.subscribe span {
+        display: none;
+    }
+    .iva-btn.subscribe img {
+        display: inline-block;
     }
 }
 
