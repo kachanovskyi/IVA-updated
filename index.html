@@ -6,7 +6,7 @@
   <title>IVABOT</title>
   <link rel="icon" type="image/png" href="img/logo.png">
 </head>
-<body>
+<body class="paraxify">
 <section id="wrapper">
   <div class="slide-cover row">
     <div class="slide-1 paraxify">
@@ -39,7 +39,7 @@
         <div class="col-sm-offset-1 col-sm-10">
           <h1 class="white">Meet IVA - Your Immigration Virtual Assistant</h1>
           <h1 class="white font-light">A Chatbot to Help Me Go to Canada?</h1>
-          <h1 class="white">Now we’re talking!</h1>
+          <h1 class="white font-light">Now we’re talking!</h1>
           <a href="https://www.messenger.com/t/255264931582804" target="_blank" class="iva-btn">Say Hi in Messenger</a>
           <a href="about.html" class="iva-btn white page-scroll">Learn more</a>
         </div>
@@ -62,21 +62,21 @@
             <h1 class="font-light col-md-12">Designed by Immigration Professionals</h1>
           </div>
           <div class="row">
-            <div class="case col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-4">
+            <div class="case col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-4 animate-in">
               <img src="./img/immigration-ill.svg"/>
               <p class="title">Immigrate</p>
               <p class="text">
                 Want to make Canada your new home? Explore your options.
               </p>
             </div>
-            <div class="case col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-4">
+            <div class="case col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-4 animate-in">
               <img src="./img/work&study-ill.svg"/>
               <p class="title">Work/Study</p>
               <p class="text">
                 Canada is in your career plans? Let’s work that out.
               </p>
             </div>
-            <div class="case col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-4">
+            <div class="case col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-4 animate-in">
               <img src="./img/visit-ill.svg"/>
               <p class="title">Visit</p>
               <p class="text">
@@ -91,9 +91,9 @@
 
   <div class="slide-cover row">
     <div class="slide-3 paraxify">
-      <div class="container-inner col-md-offset-1 col-md-10">
-        <div class="col-sm-offset-1 col-sm-10 display-table">
-          <div class="iva-description col-md-5 col-lg-6">
+      <div class="container-inner col-md-offset-1 col-md-10" id="particles-js">
+        <div class="col-sm-12 col-md-offset-1 col-md-10 display-table">
+          <div class="iva-description col-sm-12 col-md-5 col-lg-6">
             <h1>Available for you Anytime</h1>
             <h1 class="font-light">Everywhere</h1>
             <p class="no-bottom-margin">
@@ -105,8 +105,9 @@
             <a href="https://www.messenger.com/t/255264931582804" target="_blank" class="iva-btn">Say Hi</a>
 
           </div>
-          <div class="iva-description-img col-md-offset-1 col-md-6 col-lg-offset-1 col-lg-5">
-            <img src="img/iphone-img.png"/>
+          <div class="iva-description col-sm-0 col-md-1"></div>
+          <div class="iva-description-img col-xs-12 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
+            <img src="img/iphone-img.png" class="animate-in"/>
           </div>
         </div>
       </div>
@@ -144,8 +145,7 @@
             <h1>Stay connected</h1>
             <h1 class="font-light ordinary-line-height">Subscribe to our newsletter</h1>
             <p>
-              Join our list to get useful resources and tips, which help you immigrate to Canada. It’s 100% free. No
-              spam, unsubscribe at any time.
+              Join our list to get useful resources and tips to help you go to Canada. It’s 100% free. Unsubscribe at any time.
             </p>
             <div class="row">
               <form id="subscribeForm" action="https://formspree.io/francis@exeo.ca" method="post" target="_blank" class="col-xs-12">
@@ -170,10 +170,14 @@
           <h1 class="font-light white">Professionals</h1>
         </div>
         <div class="col-md-3 logo-container">
-          <img src="img/exeo-logo.svg"/>
+          <a href="http://www.exeo.ca" target="_blank">
+            <img src="img/exeo-logo.svg"/>
+          </a>
         </div>
         <div class="col-md-3 logo-container dark">
-          <img src="img/immin-logo.svg"/>
+          <a href="http://www.immin.com" target="_blank">
+            <img src="img/immin-logo.svg"/>
+          </a>
         </div>
       </div>
     </div>
@@ -187,6 +191,9 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/headhesive.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.simplr.smoothscroll.min.js"></script>
+<script src="js/particles.min.js"></script>
 <script defer>
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
@@ -233,6 +240,37 @@
         }
     };
     var header = new Headhesive('.header', options);
+
+    particlesJS.load('particles-js', 'assets/particles.json');
+
+    $(document).ready(function() {
+
+      /* Every time the window is scrolled ... */
+        $(window).scroll( function(){
+
+          /* Check the location of each desired element */
+            $('.animate-in').each( function(i){
+
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight()/2;
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+              /* If the object is completely visible in the window, fade it it */
+                if( bottom_of_window > bottom_of_object ){
+                    console.log(bottom_of_object, 'object');
+                    console.log(bottom_of_window, 'window');
+
+                    $(this).animate({
+                        'opacity': '1',
+                        'padding-top': '0'
+                    }, 800)
+
+                }
+
+            });
+
+        });
+
+    });
 </script>
 </body>
 </html>

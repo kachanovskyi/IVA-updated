@@ -3,6 +3,8 @@ body, html {
     overflow-x: hidden;
     font-family: "Open Sans", sans-serif;
     text-align: left;
+    -webkit-overflow-scrolling: auto; /* lets it scroll lazy */
+    background: url("../img/header-img-min.png") center;
 }
 
 h1, h2 {
@@ -73,7 +75,7 @@ a:active {
 
 .header--clone {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
 
@@ -272,6 +274,9 @@ a:active {
 .slide-1 {
     min-height: 700px;
 }
+.slide-1 .content h1:first-child {
+   margin-bottom: 30px;
+}
 
 .slide-1,
 .slide-2,
@@ -279,7 +284,7 @@ a:active {
 .slide-4,
 .slide-5,
 .slide-6 {
-    background: url("../img/header-img-min.png") center;
+    /*background: url("../img/header-img-min.png") center;*/
     display: flex;
     float: left;
     width: 100%;
@@ -307,6 +312,9 @@ a:active {
     background: #FFFFFF;
     width: 100%;
     padding-top: 80px;
+}
+.slide-1 .iva-btn {
+    margin-top: 40px;
 }
 
 .slide-2 {
@@ -357,16 +365,14 @@ a:active {
 }
 
 .slide-3 .iva-description {
-    display: inline-block;
     vertical-align: middle;
-    float: none;
     padding: 0;
+    z-index: 1;
 }
 .slide-3 .iva-description-img {
-    display: inline-block;
     vertical-align: middle;
-    float: none;
     padding: 50px 0 0;
+    z-index: 1;
 }
 .slide-3 .iva-description-img img {
     max-width: 100%;
@@ -421,135 +427,12 @@ a:active {
     background: #003780;
 }
 
-/*.slide-3,*/
-/*.slide-4 {*/
-    /*padding: 80px 50px 40px;*/
-/*}*/
-
-/*.slide-3 h2 {*/
-    /*color: #FFFFFF;*/
-/*}*/
-
-.service {
-    padding: 0 50px;
-}
-
-.service:first-child {
-    padding-right: 30px;
-}
-
-.service:last-child {
-    padding-left: 30px;
-}
-
-.service .header {
-    margin: 30px 0 10px;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 100%;
-    color: #49516B;
-}
-
-.service .text {
-    line-height: 110%;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.advantage {
-    padding-bottom: 40px;
-    vertical-align: middle;
-    display: table-cell;
-    float: none;
-    text-align: left;
-}
-
-.advantage > img {
-    display: inline-block;
-    max-width: 39%;
-    vertical-align: middle;
-}
-
-.advantage .description {
-    display: inline-block;
-    max-width: calc(60% - 30px);
-    vertical-align: middle;
-    margin-left: 30px;
-}
-
-.advantage .description .header {
-    font-size: 21px;
-    font-weight: 500;
-    line-height: 100%;
-    color: #FFFFFF;
-}
-
-.advantage .description .subheader {
-    margin-bottom: 0;
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.8);
-}
-
 .slide-4 .advantage .description .header {
     color: #49516B;
 }
 
 .slide-4 .advantage .description .subheader {
     color: rgba(0, 0, 0, .5);
-}
-
-#footer {
-    width: 100%;
-    min-height: 12vh;
-    display: block;
-    float: left;
-    background: #49516B;
-    text-align: center;
-    border-top: 1px solid rgba(0, 0, 0, .11);
-    padding-bottom: 80px;
-}
-
-.footer-inner {
-    margin-top: 70px;
-    display: flex;
-}
-
-.footer-inner .logo-container {
-    align-items: stretch;
-}
-
-.logo-container .copyright {
-    color: rgba(255, 255, 255, .8);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.footer-inner a {
-    float: left;
-    clear: both;
-}
-
-.footer-inner a:hover {
-    text-decoration: underline;
-}
-
-.footer-inner a,
-.footer-inner p {
-    text-decoration: none;
-    font-size: 16px;
-    margin-bottom: 8px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, .5);
-}
-
-.footer-inner .heading {
-    color: #FFFFFF;
-    margin-bottom: 30px;
-    border-bottom: none;
-}
-
-#footer-logo {
-    width: 60px;
 }
 
 #subscribeForm input {
@@ -572,6 +455,18 @@ a:active {
 .subscribe-container p:not(.heading) {
     margin: 20px auto 0;
     display: inline-block;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.animate-in {
+    padding-top: 50px;
+    opacity: 0;
 }
 
 
@@ -620,6 +515,12 @@ a:active {
 
     .slide-2 .powered-header {
         display: none;
+    }
+
+    .slide-3 .iva-description,
+    .slide-3 .iva-description-img {
+        display: table-cell;
+        float: none;
     }
 
     .slide-5 .flexbox {
@@ -770,6 +671,10 @@ a:active {
         padding-right: 30px;
     }
 
+    /*.slide-3 .iva-description-img img {*/
+        /*margin-left: -30px;*/
+    /*}*/
+
     .slide-6 .container-inner {
         display: block;
     }
@@ -792,7 +697,7 @@ a:active {
         height: auto;
     }
     .slide-1 > .content {
-        padding-top: 180px;
+        padding-top: 120px;
         display: block;
         min-height: 100vh;
         height: auto;
