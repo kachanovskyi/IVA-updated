@@ -419,12 +419,26 @@ a:active {
     text-align: center;
     background: #0052BF;
     float: none;
+    padding-left: 0;
+    padding-right: 0;
 }
-.slide-6 .logo-container > img {
+.slide-6 .logo-container img {
     max-width: 80%;
 }
 .slide-6 .logo-container.dark{
     background: #003780;
+}
+
+.slide-6 .logo-container a p {
+    color: #FFFFFF !important;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 7.2px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: 110%;
 }
 
 .slide-4 .advantage .description .header {
@@ -696,15 +710,18 @@ a:active {
         min-height: 100vh;
         height: auto;
     }
+
     .slide-1 > .content {
         padding-top: 120px;
         display: block;
         min-height: 100vh;
         height: auto;
     }
+
     .slide-1 .iva-btn {
         margin-right: 20px;
     }
+
     .iva-btn.white {
         margin: 20px 0;
     }
@@ -712,11 +729,26 @@ a:active {
     .iva-btn.subscribe {
         padding: 22px 12px;
     }
+
     .iva-btn.subscribe span {
         display: none;
     }
+
     .iva-btn.subscribe img {
         display: inline-block;
+    }
+
+    .slide-6 .logo-container {
+        padding: 60px 5px 60px 20px;
+    }
+
+    .slide-6 .logo-container.dark {
+        padding: 60px 20px 60px 5px;
+    }
+
+    .slide-6 .logo-container p {
+        max-width: 100%;
+        word-wrap: break-word;
     }
 }
 

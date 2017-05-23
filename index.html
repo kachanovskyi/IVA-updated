@@ -105,7 +105,7 @@
             <a href="https://www.messenger.com/t/255264931582804" target="_blank" class="iva-btn">Say Hi</a>
 
           </div>
-          <div class="iva-description col-sm-0 col-md-1"></div>
+          <div class="iva-description hidden-xs hidden-sm col-md-1"></div>
           <div class="iva-description-img col-xs-12 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
             <img src="img/iphone-img.png" class="animate-in"/>
           </div>
@@ -145,11 +145,14 @@
             <h1>Stay connected</h1>
             <h1 class="font-light ordinary-line-height">Subscribe to our newsletter</h1>
             <p>
-              Join our list to get useful resources and tips to help you go to Canada. It’s 100% free. Unsubscribe at any time.
+              Join our list to get useful resources and tips to help you go to Canada. It’s 100% free. Unsubscribe at
+              any time.
             </p>
             <div class="row">
-              <form id="subscribeForm" action="https://formspree.io/francis@exeo.ca" method="post" target="_blank" class="col-xs-12">
-                <input class="col-xs-9 col-sm-6 col-md-9 col-lg-8" type="email" name="email" placeholder="Your email address"/>
+              <form id="subscribeForm" action="https://formspree.io/francis@exeo.ca" method="post" target="_blank"
+                    class="col-xs-12">
+                <input class="col-xs-9 col-sm-6 col-md-9 col-lg-8" type="email" name="email"
+                       placeholder="Your email address"/>
                 <button type="submit" class="col-xs-3 col-sm-3 col-lg-4 iva-btn subscribe">
                   <span>Subscribe</span>
                   <img src="img/arrow-icon.svg"/>
@@ -172,11 +175,13 @@
         <div class="col-md-3 logo-container">
           <a href="http://www.exeo.ca" target="_blank">
             <img src="img/exeo-logo.svg"/>
+            <p>Attorneys</p>
           </a>
         </div>
         <div class="col-md-3 logo-container dark">
           <a href="http://www.immin.com" target="_blank">
             <img src="img/immin-logo.svg"/>
+            <p>Immigrant Investors</p>
           </a>
         </div>
       </div>
@@ -243,33 +248,40 @@
 
     particlesJS.load('particles-js', 'assets/particles.json');
 
-    $(document).ready(function() {
+    $(document).ready(function () {
+
+        var logosHeights = function () {
+            var height = $($('.logo-container')[0]).css('height');
+            $('.logo-container').css('height', height);
+        };
 
       /* Every time the window is scrolled ... */
-        $(window).scroll( function(){
+        $(window)
+            .scroll(function () {
 
-          /* Check the location of each desired element */
-            $('.animate-in').each( function(i){
+              /* Check the location of each desired element */
+                $('.animate-in').each(function (i) {
 
-                var bottom_of_object = $(this).offset().top + $(this).outerHeight()/2;
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight() / 2;
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-              /* If the object is completely visible in the window, fade it it */
-                if( bottom_of_window > bottom_of_object ){
-                    console.log(bottom_of_object, 'object');
-                    console.log(bottom_of_window, 'window');
+                  /* If the object is completely visible in the window, fade it it */
+                    if (bottom_of_window > bottom_of_object) {
+                        console.log(bottom_of_object, 'object');
+                        console.log(bottom_of_window, 'window');
 
-                    $(this).animate({
-                        'opacity': '1',
-                        'padding-top': '0'
-                    }, 800)
+                        $(this).animate({
+                            'opacity': '1',
+                            'padding-top': '0'
+                        }, 800)
 
-                }
+                    }
 
-            });
+                });
 
-        });
-
+            })
+            .resize(logosHeights);
+        logosHeights();
     });
 </script>
 </body>
