@@ -106,8 +106,11 @@
 
           </div>
           <div class="iva-description hidden-xs hidden-sm col-md-1"></div>
-          <div class="iva-description-img col-xs-12 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
-            <img src="img/iphone-img.png" class="animate-in"/>
+          <div class="iva-description-img animate-in col-xs-12 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
+            <!--<img src="img/iphone-img.png" class=""/>-->
+            <video class="bot-video" autoplay loop muted poster="img/iva.jpg">
+              <source src="video/IVA.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
@@ -121,8 +124,7 @@
           <div class="col-md-10">
             <h1 class="white">Want to go to Canada?</h1>
             <h1 class="white font-light">Let’s have a chat!</h1>
-            <a href="https://www.messenger.com/t/255264931582804" target="_blank" class="iva-btn">Message us in
-              messenger</a>
+            <a href="https://www.messenger.com/t/255264931582804" target="_blank" class="iva-btn">Message us in messenger</a>
           </div>
         </div>
       </div>
@@ -196,93 +198,6 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/headhesive.min.js"></script>
-<script src="js/jquery.mousewheel.min.js"></script>
-<script src="js/jquery.simplr.smoothscroll.min.js"></script>
-<script src="js/particles.min.js"></script>
-<script defer>
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
-        var paraxifyInit = function () {
-            myParaxify = paraxify('.paraxify');
-        };
-
-        var loadScript = function (url, callback) {
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-
-            if (script.readyState) { //IE
-                script.onreadystatechange = function () {
-                    if (script.readyState == "loaded" || script.readyState == "complete") {
-                        script.onreadystatechange = null;
-                        callback();
-                    }
-                };
-            } else { //Others
-                script.onload = function () {
-                    callback();
-                };
-            }
-
-            script.src = url;
-            document.getElementsByTagName("head")[0].appendChild(script);
-        };
-
-        loadScript("./js/paraxify.min.js", paraxifyInit);
-    }
-
-    //dynamic header script
-    var options = {
-        offset: '#showHeader',
-        offsetSide: 'top',
-        classes: {
-            clone: 'header--clone',
-            stick: 'header--stick',
-            unstick: 'header--unstick'
-        },
-        onStick: function () {
-            $('#fbIcon').attr('src', './img/fb-icon-dark.svg');
-            $('#twIcon').attr('src', './img/tw-icon-dark.svg');
-        }
-    };
-    var header = new Headhesive('.header', options);
-
-    particlesJS.load('particles-js', 'assets/particles.json');
-
-    $(document).ready(function () {
-
-        var logosHeights = function () {
-            var height = $($('.logo-container')[0]).css('height');
-            $('.logo-container').css('height', height);
-        };
-
-      /* Every time the window is scrolled ... */
-        $(window)
-            .scroll(function () {
-
-              /* Check the location of each desired element */
-                $('.animate-in').each(function (i) {
-
-                    var bottom_of_object = $(this).offset().top + $(this).outerHeight() / 2;
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-                  /* If the object is completely visible in the window, fade it it */
-                    if (bottom_of_window > bottom_of_object) {
-                        console.log(bottom_of_object, 'object');
-                        console.log(bottom_of_window, 'window');
-
-                        $(this).animate({
-                            'opacity': '1',
-                            'padding-top': '0'
-                        }, 800)
-
-                    }
-
-                });
-
-            })
-            .resize(logosHeights);
-        logosHeights();
-    });
-</script>
+<script defer src="js/index.js"></script>
 </body>
 </html>
