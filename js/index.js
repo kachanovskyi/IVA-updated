@@ -61,7 +61,7 @@ if (/Android|IEMobile/i.test(navigator.userAgent)) {
     var figure2 = videoSlide.hover(hoverVideo, hideVideo);
     var figure21 = videoSlide.click(hoverVideo);
 } else if (/webOS|iPhone|iPad|iPod|BlackBerry|Opera Mini/i.test(navigator.userAgent)) {
-    var video = $(".iva-description-img");
+    var video = $(".iva-description-img video");
     var figure = video.hover(hoverVideo, hideVideo);
     var figure1 = video.click(hoverVideo);
     $("video").prop('muted', true);
