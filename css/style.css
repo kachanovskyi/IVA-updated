@@ -638,7 +638,7 @@ a:active {
 
 @media (max-width: 991px) {
     #wrapper [class*="slide-"] {
-        background-attachment: scroll;
+        background-attachment: scroll !important;
     }
 
     .header--stick .navbar {

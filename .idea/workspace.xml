@@ -15,7 +15,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1037">
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="307" column="1" lean-forward="true" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
+            <state relative-caret-position="234">
+              <caret line="640" column="49" lean-forward="false" selection-start-line="640" selection-start-column="49" selection-end-line="640" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -316,12 +316,12 @@
       <workItem from="1495433360525" duration="8425000" />
       <workItem from="1495523730005" duration="12882000" />
       <workItem from="1495608787864" duration="9071000" />
-      <workItem from="1495691987580" duration="4390000" />
+      <workItem from="1495691987580" duration="4618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122519000" />
+    <option name="totallyTimeSpent" value="122747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1612" height="867" extended-state="0" />
@@ -723,18 +723,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="307" column="1" lean-forward="true" selection-start-line="307" selection-start-column="1" selection-end-line="307" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
           <caret line="108" column="37" lean-forward="false" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="640" column="49" lean-forward="false" selection-start-line="640" selection-start-column="49" selection-end-line="640" selection-end-column="49" />
           <folding />
         </state>
       </provider>
