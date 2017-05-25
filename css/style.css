@@ -72,11 +72,11 @@ a:active {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 
 .header--clone {
     position: fixed;
-    z-index: 3;
     top: 0;
     left: 0;
 
@@ -628,8 +628,8 @@ a:active {
         padding: 0;
     }
 
-    #wrapper [class*="slide-"] {
-        background-attachment: scroll;
+    body.paraxify {
+        background-attachment: scroll !important;
     }
 
     .slide-1 {
