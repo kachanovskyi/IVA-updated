@@ -4,6 +4,10 @@ body, html {
     font-family: "Open Sans", sans-serif;
     text-align: left;
     -webkit-overflow-scrolling: auto; /* lets it scroll lazy */
+}
+
+
+#wrapper {
     background: url("../img/header-img-min.png") center;
 }
 
@@ -628,7 +632,7 @@ a:active {
         padding: 0;
     }
 
-    body.paraxify {
+    #wrapper.paraxify {
         background-attachment: scroll !important;
         height: 100vh;
     }
