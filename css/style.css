@@ -408,13 +408,13 @@ a:active {
 
 .bot-video {
     width: 197px;
-    height: 349px;
+    height: 350px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-    margin-top: -34px;
+    margin-top: -33px;
     margin-left: 20px;
 }
 
@@ -547,9 +547,9 @@ a:active {
 
     .slide-3 .iva-description-img .bot-video {
         width: 205px;
-        height: 350px;
-        margin-top: -34px;
-        margin-left: 21px;
+        height: 358px;
+        margin-top: -35px;
+        margin-left: 20px;
     }
 
     .iva-btn.subscribe {
@@ -564,6 +564,15 @@ a:active {
     .iva-btn.subscribe img {
         display: inline-block;
         /*padding: 12px 24px;*/
+    }
+}
+
+@media (max-width: 1025px) {
+    .slide-3 .iva-description-img .bot-video {
+        width: 212px;
+        height: 376px;
+        margin-top: -36px;
+        margin-left: 21px;
     }
 }
 
@@ -632,9 +641,8 @@ a:active {
         padding: 0;
     }
 
-    #wrapper.paraxify {
+    .slide-1.paraxify {
         background-attachment: scroll !important;
-        height: 100vh;
     }
 
     .slide-1 {
@@ -690,7 +698,7 @@ a:active {
     .slide-3 .iva-description-img .bot-video {
         width: 195px;
         height: 350px;
-        margin-left: 21px;
+        margin-left: 20px;
         margin-top: -34px;
     }
 
@@ -840,6 +848,16 @@ a:active {
     .slide-6 .logo-container p {
         max-width: 100%;
         word-wrap: break-word;
+    }
+}
+
+@media (max-width: 350px) {
+    .slide-1 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header:not(.header--clone) .content {
+        padding: 0 15px;
     }
 }
 
