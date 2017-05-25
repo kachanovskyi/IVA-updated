@@ -403,7 +403,7 @@ a:active {
     height: 100%;
 }
 .slide-3 .iva-description-img .video {
-    z-index: 3;
+    z-index: 9;
 }
 
 .bot-video {
