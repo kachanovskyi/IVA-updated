@@ -630,6 +630,7 @@ a:active {
 
     body.paraxify {
         background-attachment: scroll !important;
+        height: 100vh;
     }
 
     .slide-1 {
