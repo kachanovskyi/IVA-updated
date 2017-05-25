@@ -6,7 +6,6 @@ body, html {
     -webkit-overflow-scrolling: auto; /* lets it scroll lazy */
 }
 
-
 #wrapper {
     background: url("../img/header-img-min.png") center;
 }
@@ -659,7 +658,7 @@ a:active {
         height: 100vh;
         display: table-cell;
         vertical-align: middle;
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     .slide-1 .container-bottom {

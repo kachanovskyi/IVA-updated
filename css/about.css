@@ -10,7 +10,20 @@
 }
 
 @media (max-width: 991px) {
+    .slide-1 > .content {
+        display: table-cell;
+        height: 100vh;
+        padding-top: 80px;
+    }
     .about-section .slide-1.paraxify {
-        background: url("../img/header-img-min.png") center;
+        background: url("../img/about-bg-min.png") center;
+    }
+}
+
+@media (max-width: 575px) {
+    .slide-1 > .content {
+        display: table-cell;
+        height: 100vh;
+        padding-top: 80px;
     }
 }
