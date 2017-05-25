@@ -8,7 +8,7 @@ body, html {
 
 
 #wrapper {
-    /*background: url("../img/header-img-min.png") center;*/
+    background: url("../img/header-img-min.png") center;
 }
 
 h1, h2 {
@@ -298,7 +298,6 @@ a:active {
 .slide-4,
 .slide-5,
 .slide-6 {
-    background: url("../img/header-img-min.png") center;
     display: flex;
     float: left;
     width: 100%;
@@ -637,18 +636,18 @@ a:active {
 }
 
 @media (max-width: 991px) {
-    #wrapper [class*="slide-"] {
-        background-attachment: scroll !important;
-    }
-
     .header--stick .navbar {
         background: #FFFFFF;
         box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 40px rgba(0, 0, 0, 0.05);
         padding: 0;
     }
 
+    #wrapper [class*="slide-"] {
+        background-attachment: scroll !important;
+    }
+
     .slide-1.paraxify {
-        /*background-attachment: scroll !important;*/
+        background: url("../img/header-img-min.png") center;
     }
 
     .slide-1 {

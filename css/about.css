@@ -10,13 +10,7 @@
 }
 
 @media (max-width: 991px) {
-    .slide-1 > .content{
-        display: table-cell;
-        height: 100vh;
-        padding-top: 80px;
-    }
-    .slide-1.paraxify {
-        background-attachment: scroll !important;
-        background: url("../img/about-bg-min.png") center;
+    .about-section .slide-1.paraxify {
+        background: url("../img/header-img-min.png") center;
     }
 }
