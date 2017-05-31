@@ -198,13 +198,13 @@
 </section>
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="css/style.css">-->
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/headhesive.min.js"></script>
 <script>var cb = function() {
     var l = document.createElement('link'); l.rel = 'stylesheet';
-    l.href = 'PATH_TO_COMBINED_CSS_FILE';
+    l.href = './style.css';
     var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
