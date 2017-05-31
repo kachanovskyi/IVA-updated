@@ -109,6 +109,7 @@ var options = {
     onStick: function () {
         $('#fbIcon').attr('src', './img/fb-icon-dark.svg');
         $('#twIcon').attr('src', './img/tw-icon-dark.svg');
+        console.log(11);
     }
 };
 var header = new Headhesive('.header', options);
