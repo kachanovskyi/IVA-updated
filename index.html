@@ -5,6 +5,355 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>IVABOT</title>
   <link rel="icon" type="image/png" href="img/logo.png">
+
+  <style>
+    body,
+    html {
+      width: 100%;
+      overflow-x: hidden;
+      font-family: "Open Sans", sans-serif;
+      text-align: left;
+      -webkit-overflow-scrolling: auto;
+      /* lets it scroll lazy */
+    }
+
+    #wrapper {
+      background: url("../img/header-img-min.png") center;
+    }
+
+    h1 {
+      line-height: 140%;
+      color: #333333;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin: 0 auto;
+      letter-spacing: 0.704px;
+    }
+
+    h1.white {
+      color: #FFFFFF !important;
+    }
+
+    .font-light {
+      font-weight: 300;
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    a,
+    a:visited {
+      text-decoration: none;
+    }
+
+    .header {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+
+    .navbar.navbar-default .navbar-brand {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .navbar {
+      background-color: transparent;
+      padding-top: 0;
+      border: none;
+      margin-bottom: 0;
+    }
+
+    .navbar.navbar-default {
+      background: transparent;
+    }
+
+    .navbar.navbar-default .navbar-brand {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      margin: 32px 0;
+      font-weight: 400;
+      color: #2F80ED !important;
+      height: auto;
+    }
+
+    .navbar.navbar-default .navbar-brand > .menu-item {
+      color: #FFFFFF !important;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 7.2px;
+    }
+
+    .nav.navbar-nav {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .nav.navbar-nav.navbar-right > li > a.menu-item {
+      font-size: 18px;
+      line-height: 140%;
+      font-weight: 300;
+      text-decoration: none;
+      padding: 30px 0 30px 20px;
+    }
+
+    .nav.navbar-nav.navbar-right > li > a.menu-item > img {
+      height: 20px;
+    }
+
+    .navbar-collapse.collapse {
+      display: inline-block;
+      border: none;
+      padding: 0;
+    }
+
+    .navbar-nav > li,
+    .navbar-nav {
+      float: left !important;
+    }
+
+    .navbar-right {
+      float: right !important;
+    }
+
+    .nav.navbar-nav.navbar-right > li > a.menu-item:link,
+    .nav.navbar-nav.navbar-right > li > a.menu-item:visited {
+      text-decoration: none;
+    }
+
+    .nav.navbar-nav.navbar-right > li > a > img {
+      vertical-align: middle;
+    }
+
+    .iva-btn {
+      display: inline-block;
+      background: #006DFF;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0.288px;
+      color: #FFFFFF;
+      border-radius: 2px;
+      padding: 24px;
+      margin-top: 30px;
+      text-align: center;
+      border: none;
+    }
+
+    .iva-btn:link,
+    .iva-btn:visited {
+      text-decoration: none !important;
+      color: #FFFFFF;
+    }
+
+    .iva-btn.white {
+      padding: 24px 36px;
+      background: #FFFFFF;
+      color: #006DFF;
+      margin-left: 20px;
+    }
+
+    .iva-btn.subscribe img {
+      display: none;
+    }
+
+    .paraxify {
+      background-attachment: fixed !important;
+      background-position: center center !important;
+      background-size: cover !important;
+    }
+
+    .slide-1 {
+      min-height: 600px;
+      height: 100vh;
+    }
+
+    .slide-1 {
+      min-height: 700px;
+    }
+
+    .slide-1 .content h1:first-child {
+      margin-bottom: 30px;
+    }
+
+    .slide-1 {
+      display: flex;
+      float: left;
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      flex-direction: column;
+    }
+
+    .slide-1 > .content {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .slide-1 .container-bottom {
+      position: absolute;
+      bottom: 0;
+      background: #FFFFFF;
+      width: 100%;
+      padding-top: 80px;
+    }
+
+    .slide-1 .iva-btn {
+      margin-top: 40px;
+    }
+
+    .slide-2 .powered-header {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 1199px) {
+      h1 {
+        letter-spacing: 0;
+      }
+
+      .slide-1 .container-bottom {
+        padding-top: 50px;
+      }
+
+      .iva-btn.subscribe img {
+        display: inline-block;
+        /*padding: 12px 24px;*/
+      }
+    }
+
+    @media (min-width: 992px) {
+      #showHeader {
+        position: absolute;
+        bottom: 140px;
+      }
+
+      .slide-1 > .content {
+        padding: 0;
+      }
+
+      .slide-2 .powered-header {
+        display: none;
+      }
+    }
+
+    @media (max-width: 991px) {
+      #wrapper [class*="slide-"] {
+        background-attachment: scroll !important;
+      }
+
+      .slide-1.paraxify {
+        background: url("../img/header-img-min.png") center;
+      }
+
+      .slide-1 {
+        display: block;
+        float: none;
+      }
+
+      .slide-1 > .content {
+        height: 100vh;
+        display: table-cell;
+        vertical-align: middle;
+        padding-top: 80px;
+      }
+
+      .slide-1 .container-bottom {
+        position: relative;
+        padding-top: 50px;
+      }
+
+      #showHeader {
+        bottom: 0;
+        position: absolute;
+      }
+
+      .iva-btn.subscribe img {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .nav.navbar-nav.navbar-right > li > a.menu-item {
+        padding: 20px 0 20px 20px;
+      }
+
+      .navbar.navbar-default .navbar-brand {
+        margin: 24px 0;
+      }
+
+      .navbar .content {
+        padding: 0 60px;
+      }
+
+      .navbar-collapse.collapse {
+        float: right;
+      }
+
+      .navbar-header {
+        display: inline-block;
+      }
+
+      .slide-1 {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .slide-1 {
+        float: left;
+        min-height: 100vh;
+        height: auto;
+      }
+
+      .slide-1 > .content {
+        padding-top: 120px;
+        display: block;
+        min-height: 100vh;
+        height: auto;
+      }
+
+      .slide-1 .iva-btn {
+        margin-right: 20px;
+      }
+
+      .iva-btn.white {
+        margin: 20px 0;
+      }
+
+      .iva-btn.subscribe img {
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .slide-1 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .header:not(.header--clone) .content {
+        padding: 0 15px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .navbar .content {
+        /*padding: 0 7%;*/
+      }
+    }
+  </style>
+  
 </head>
 <body>
 <section id="wrapper" class="paraxify">
