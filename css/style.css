@@ -337,6 +337,16 @@ a:active {
     width: 100%;
 }
 
+.slide-2 .case:hover {
+    background: #FFFFFF;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transition: .2s ease-in-out;
+}
+
+.slide-2 .case:hover {
+    text-decoration: none;
+}
 .slide-2 .case img {
     height: 150px;
     max-width: 100%;
