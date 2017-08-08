@@ -14,3 +14,7 @@ ExpiresByType image/x-icon "access 1 week"
 ExpiresDefault "access 1 week"
 </IfModule>
 ## EXPIRES CACHING ##
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

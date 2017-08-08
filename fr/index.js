@@ -94,5 +94,5 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
         document.getElementsByTagName("head")[0].appendChild(script);
     };
 
-    loadScript("./js/paraxify.min.js", paraxifyInit);
+    loadScript("../js/paraxify.min.js", paraxifyInit);
 }

@@ -156,11 +156,26 @@ a:active {
     line-height: 140%;
     font-weight: 300;
     text-decoration: none;
-    padding: 30px 0 30px 20px;
+    padding: 10px 10px 10px 0;
+    margin: 20px 0 20px 10px;
 }
+.nav.navbar-nav.navbar-right > li:first-child > a.menu-item {
+     border-right: 1px solid rgba(256, 256, 256, .5);
+ }
+
 
 .nav.navbar-nav.navbar-right > li > a.menu-item > img {
     height: 20px;
+}
+.nav.navbar-nav.navbar-right > li > a.menu-item > p {
+    color: #FFFFFF;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+}
+
+.header--clone .nav.navbar-nav.navbar-right > li > a.menu-item > p {
+    color: #000;
 }
 
 .navbar-collapse.collapse {

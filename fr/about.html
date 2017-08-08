@@ -4,11 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>IVABOT | About</title>
-  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="icon" type="image/png" href="../img/logo.png">
 
   <style>
     .about-section #wrapper {
-      background: url("./img/about-bg-min.png") center;
+      background: url("../img/about-bg-min.png") center;
     }
   </style>
 </head>
@@ -21,19 +21,19 @@
           <div class="content col-md-offset-1 col-md-10">
             <div class="col-sm-offset-1 col-sm-10">
               <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"><span class="menu-item">IVABOT</span></a>
+                <a class="navbar-brand" href="./index.html"><span class="menu-item">IVABOT</span></a>
               </div>
               <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                   <li>
                     <a href="https://www.facebook.com/IVA-255264931582804/" class="menu-item" target="_blank">
-                      <img id="fbIcon" src="img/fb-icon.svg"/>
+                      <img id="fbIcon" src="../img/fb-icon.svg"/>
                     </a>
                   </li>
                   <li>
-                    <a href="fr/index.html" class="menu-item">
-                      <img id="twIcon" src="img/fr-icon.svg"/>
-                      <p>Français</p>
+                    <a href="../index.html" class="menu-item">
+                      <img id="gbIcon" src="../img/gb-icon.svg"/>
+                      <p>English</p>
                     </a>
                   </li>
                 </ul>
@@ -136,7 +136,7 @@
                 <input class="col-xs-9 col-sm-6 col-md-9 col-lg-8" type="email" name="email" placeholder="Your email address"/>
                 <button type="submit" class="col-xs-3 col-sm-3 col-lg-4 iva-btn subscribe">
                   <span>Subscribe</span>
-                  <img src="img/arrow-icon.svg"/>
+                  <img src="../img/arrow-icon.svg"/>
                 </button>
               </form>
             </div>
@@ -146,14 +146,14 @@
     </div>
   </div>
 </section>
-<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="../css/bootstrap.min.css"/>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/about.css">
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/headhesive.min.js"></script>
-<script defer src="js/index.js"></script>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/about.css">
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/headhesive.min.js"></script>
+<script defer src="./index.js"></script>
 <script>
     //dynamic header script
     var options = {
@@ -165,8 +165,8 @@
             unstick: 'header--unstick'
         },
         onStick: function () {
-            $('#fbIcon').attr('src', './img/fb-icon-dark.svg');
-            $('#frIcon').attr('src', './img/fr-icon.svg');
+            $('#fbIcon').attr('src', '../img/fb-icon-dark.svg');
+            $('#gbIcon').attr('src', '../img/gb-icon.svg');
         }
     };
     var header = new Headhesive('.header', options);
