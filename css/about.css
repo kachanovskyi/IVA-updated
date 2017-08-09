@@ -20,6 +20,10 @@
     }
 }
 
+@media (max-width: 767px) {
+    .nav.navbar-nav.navbar-right>li>a.menu-item{padding:20px 0 20px 20px;margin:0!important;border:none!important;}
+}
+
 @media (max-width: 575px) {
     .slide-1 > .content {
         display: table-cell;
@@ -27,3 +31,5 @@
         padding-top: 80px;
     }
 }
+
+@media (max-width:444px){.navbar .content{padding:0 10px;}}
